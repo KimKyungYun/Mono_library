@@ -15,6 +15,9 @@
     "type": "git",
     "url": "git+https://github.com/KimKyungYun/Mono_library.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "prepack": "yarn build",
     "build": "yarn clean && yarn build:tsc && yarn build:js",
