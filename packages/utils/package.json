@@ -43,5 +43,6 @@
   "dependencies": {
     "esbuild": "^0.23.1",
     "typescript": "^5.6.2"
-  }
+  },
+  "gitHead": "30a0a87d74eea6b2cc873e606b62415f60516306"
 }

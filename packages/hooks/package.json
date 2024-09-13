@@ -42,5 +42,6 @@
   },
   "devDependencies": {
     "@types/react": "^18"
-  }
+  },
+  "gitHead": "30a0a87d74eea6b2cc873e606b62415f60516306"
 }
