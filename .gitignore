@@ -1,0 +1,14 @@
+node_modules
+lerna-debug.log
+npm-debug.log
+yarn-error.log
+.DS_Store
+.env
+dist
+coverage
+.idea
+.vscode
+*.log
+*.tmp
+*.swp
+.pnp.*
