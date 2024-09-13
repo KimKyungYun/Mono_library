@@ -1,6 +1,7 @@
 {
   "name": "@kyungyun/hooks",
   "version": "0.0.1",
+  "type": "module",
   "description": "hooks for jk",
   "keywords": [
     "jkcore",
@@ -10,7 +11,7 @@
   "author": "KimKyungYun <kky38225221@gmail.com>",
   "homepage": "https://github.com/KimKyungYun/Mono_library#readme",
   "license": "MIT",
-  "main": "./",
+  "main": "./dist/index.js",
   "directories": {},
   "files": [],
   "repository": {
@@ -18,12 +19,24 @@
     "url": "git+https://github.com/KimKyungYun/Mono_library.git"
   },
   "scripts": {
-    "test": "node ./__tests__/hooks.test.js"
+    "prepack": "yarn build",
+    "build": "yarn clean && yarn build:tsc && yarn build:js",
+    "build:tsc": "yarn tsc --emitDeclarationOnly",
+    "build:js": "node build.js",
+    "clean": "rm -rf dist"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
   },
   "bugs": {
     "url": "https://github.com/KimKyungYun/Mono_library/issues"
   },
   "dependencies": {
+    "esbuild": "^0.23.1",
     "react": "^18.3.1",
     "typescript": "^5.6.2"
   },
